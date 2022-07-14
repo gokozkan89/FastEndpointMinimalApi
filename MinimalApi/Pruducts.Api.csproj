@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'MinimalApi' " />
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="FastEndpoints" Version="4.3.1" />
+    <PackageReference Include="FastEndpoints.Swagger" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Endpoints\" />
+    <None Remove="Sevices\" />
+    <None Remove="FastEndpoints" />
+    <None Remove="Models\" />
+    <None Remove="Models\Requests\" />
+    <None Remove="Models\Responses\" />
+    <None Remove="Models\Data\" />
+    <None Remove="Entities\" />
+    <None Remove="Mappers\" />
+    <None Remove="FastEndpoints.Swagger" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Endpoints\" />
+    <Folder Include="Sevices\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Requests\" />
+    <Folder Include="Models\Responses\" />
+    <Folder Include="Models\Data\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Mappers\" />
+  </ItemGroup>
+</Project>
